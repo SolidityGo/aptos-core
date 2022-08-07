@@ -102,6 +102,14 @@ impl AccessPath {
             Path::Code(_) => None,
         }
     }
+
+    pub fn is_code(&self) -> bool {
+        if let Path::Code(_) = self.get_path() {
+            true
+        } else {
+            false
+        }
+    }
 }
 
 impl fmt::Debug for AccessPath {
